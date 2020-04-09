@@ -31,6 +31,6 @@ public class TopicController {
  }
  @RequestMapping(method=RequestMethod.POST,value="/topics",produces=MediaType.APPLICATION_XML_VALUE)
  public void addTopic(@RequestBody Topic topic) {
-	 
+	 tservice.addTopic(topic);
  }
 }
