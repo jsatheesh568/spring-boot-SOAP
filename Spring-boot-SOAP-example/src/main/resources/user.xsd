@@ -1,0 +1,33 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns:tns="http://techprimers.com/spring-boot-SOAP-example" 
+		   targetNamespace="http://techprimers.com/spring-boot-SOAP-example" 
+		   elementFormDefault="qualified">
+		   
+<xs:element name="getUserRequest">
+<xs:complexType>
+<xs:sequence>
+   <xs:element name="name" type="xs:string"></xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>		   
+		   
+<xs:element name="getUserResponse">
+<xs:complexType>
+<xs:sequence>
+   <xs:element name="user" type="tns:user"></xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>		   
+		   
+<xs:element name="user">
+<xs:complexType>
+<xs:sequence>
+   <xs:element name="name" type="xs:string"></xs:element>
+   <xs:element name="empId" type="xs:int"></xs:element>
+   <xs:element name="salary" type="xs:double"></xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>		   
+		   
+		   
+</xs:schema>
